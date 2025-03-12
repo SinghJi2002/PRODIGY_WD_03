@@ -1,183 +1,95 @@
-*{
-    padding:0;
+* {
+    padding: 0;
     margin: 0;
     outline: none;
+    box-sizing: border-box;
 }
-body{
+
+body {
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
 }
-.title{
-    font-size: 50px;
+
+.title {
+    font-size: 40px;
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
-.main-game{
+
+/* Adjust grid layout for responsiveness */
+.main-game {
     display: grid;
-    flex: 1fr 1fr 1fr;
-    column-gap: 50px;
-    row-gap: 30px;
-    grid-template-columns: 50px 50px 50px;
+    grid-template-columns: repeat(3, minmax(80px, 1fr));
+    gap: 10px;
     justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 320px;
 }
-.button1{
-    height: 90px;
-    width: 80px;
+
+.main-game button {
+    width: 100%;
+    aspect-ratio: 1; /* Ensures square buttons */
     border-radius: 10px;
     border: none;
     background-color: rgb(87, 93, 144);
     color: white;
+    font-size: 24px;
     text-align: center;
     vertical-align: middle;
-    font-size: 30px;
+    transition: 0.3s;
 }
-.button1:hover{
+
+.main-game button:hover {
     cursor: pointer;
     opacity: 0.8;
-    transition: opacity 0.8s;
 }
-.button2{
-    height: 90px;
-    width: 80px;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(87, 93, 144);
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 30px;
+
+.re {
+    margin-top: 20px;
 }
-.button2:hover{
-    cursor: pointer;
-    opacity: 0.8;
-    transition: opacity 0.8s;
-}
-.button3{
-    height: 90px;
-    width: 80px;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(87, 93, 144);
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 30px;
-}
-.button3:hover{
-    cursor: pointer;
-    opacity: 0.8;
-    transition: opacity 0.8s;
-}
-.button4{
-    height: 90px;
-    width: 80px;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(87, 93, 144);
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 30px;
-}
-.button4:hover{
-    cursor: pointer;
-    opacity: 0.8;
-    transition: opacity 0.8s;
-}
-.button5{
-    height: 90px;
-    width: 80px;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(87, 93, 144);
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 30px;
-}
-.button5:hover{
-    cursor: pointer;
-    opacity: 0.8;
-    transition: opacity 0.8s;
-}
-.button6{
-    height: 90px;
-    width: 80px;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(87, 93, 144);
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 30px;
-}
-.button6:hover{
-    cursor: pointer;
-    opacity: 0.8;
-    transition: opacity 0.8s;
-}.button7{
-    height: 90px;
-    width: 80px;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(87, 93, 144);
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 30px;
-}
-.button7:hover{
-    cursor: pointer;
-    opacity: 0.8;
-    transition: opacity 0.8s;
-}.button8{
-    height: 90px;
-    width: 80px;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(87, 93, 144);
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 30px;
-}
-.button8:hover{
-    cursor: pointer;
-    opacity: 0.8;
-    transition: opacity 0.8s;
-}.button9{
-    height: 90px;
-    width: 80px;
-    border-radius: 10px;
-    border: none;
-    background-color: rgb(87, 93, 144);
-    color: white;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 30px;
-}
-.button9:hover{
-    cursor: pointer;
-    opacity: 0.8;
-    transition: opacity 0.8s;
-}
-.re{
-    margin-top: 40px;
-    text-align: center; 
-}
-.reset{
-    width: 100px;
+
+.reset {
+    width: 120px;
     height: 50px;
     border-radius: 20px;
     border: none;
-    outline: none;
     background-color: rgb(87, 93, 144);
     color: white;
+    font-size: 18px;
     font-weight: 700;
+    transition: 0.3s;
 }
-.reset:hover{
+
+.reset:hover {
     cursor: pointer;
     opacity: 0.8;
-    transition: opacity 0.8s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .title {
+        font-size: 30px;
+    }
+
+    .main-game {
+        max-width: 250px;
+        gap: 8px;
+    }
+
+    .main-game button {
+        font-size: 20px;
+    }
+
+    .reset {
+        width: 100px;
+        height: 45px;
+        font-size: 16px;
+    }
 }
